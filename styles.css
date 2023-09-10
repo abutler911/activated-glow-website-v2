@@ -8,11 +8,15 @@
   font-family: "Charlotte";
   src: url("/fonts/Charlotte.otf") format("opentype");
 }
-
+@font-face {
+  font-family: "Gloss and Bloom";
+  src: url("/fonts/Gloss_And_Bloom.ttf") format("truetype");
+}
 @font-face {
   font-family: "Patrena";
   src: url("/fonts/Patrena Rolane.otf") format("opentype");
 }
+
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap");
 
 /* Root Variables */
@@ -24,14 +28,14 @@
 }
 
 .cursive {
-  font-family: "Charlotte", cursive;
+  font-family: "Gloss and Bloom", cursive;
   font-size: 3.2em;
   font-weight: bold;
   color: var(--navy-blue);
 }
 /* Global Styles */
 body {
-  font-family: "Charlotte", cursive;
+  font-family: "Gloss and Bloom", cursive;
   margin: 0;
   padding: 0;
   background-color: #fff;
@@ -201,10 +205,10 @@ body {
     align-items: center;
   }
   .header h1 {
-    font-size: 4.5em;
+    font-size: 2.8em;
   }
   .header ul li {
-    font-size: 2em;
+    font-size: 1.1em;
   }
   .main {
     flex-direction: column;
@@ -217,7 +221,7 @@ body {
     margin-top: 110px;
   }
   .main-text h2 {
-    font-size: 4em;
+    font-size: 2.5em;
     text-align: center;
     margin-bottom: 20px;
     margin-top: -25px;
@@ -228,7 +232,7 @@ body {
   }
 
   .cursive {
-    font-size: 1.5em;
+    font-size: 1em;
     margin-top: -20px;
   }
   .button {
