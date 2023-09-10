@@ -1,0 +1,240 @@
+/* Font Face Declarations */
+@font-face {
+  font-family: "Cherolina";
+  src: url("/fonts/Cherolina.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Charlotte";
+  src: url("/fonts/Charlotte.otf") format("opentype");
+}
+
+/* Root Variables */
+:root {
+  --dark-brown: #4e3524;
+  --main-pink: #e8b3bc;
+  --navy-blue: #4b68b8;
+  --emerald-green: #009b77;
+}
+
+.cursive {
+  font-family: "Cherolina", cursive;
+  font-size: 3.2em;
+  font-weight: bold;
+  color: var(--navy-blue);
+}
+/* Global Styles */
+body {
+  font-family: "Cherolina";
+  margin: 0;
+  padding: 0;
+  background-color: #fff;
+  color: var(--main-pink);
+}
+
+/* Header Styles */
+.header {
+  background-color: var(--dark-brown);
+  padding: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  width: 100%;
+}
+
+.header h1,
+.header ul li {
+  margin: 0;
+  padding: 0;
+}
+
+.header h1 {
+  font-size: 4em;
+}
+
+.header ul {
+  list-style-type: none;
+}
+
+.header ul li {
+  display: inline;
+  margin-right: 30px;
+  font-size: 2em;
+}
+
+/* Main Content Styles */
+.main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 90px 20px 20px 20px;
+  background: radial-gradient(circle, #fff, var(--main-pink));
+}
+
+.main img {
+  width: 700px;
+  height: 900px;
+}
+
+.main-text h2 {
+  font-size: 7em;
+  color: var(--dark-brown);
+  font-weight: 900;
+  text-align: center;
+}
+
+.main-description {
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  color: var(--dark-brown);
+  width: 100%;
+  font-size: 1.8em;
+  line-height: 1.5em;
+  text-align: center;
+  margin-top: -90px;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Button Styles */
+.buttons {
+  display: flex;
+  justify-content: space-around;
+}
+
+.button {
+  background-color: var(--navy-blue);
+  color: rgb(209, 209, 209);
+  border: none;
+  border-radius: 10px;
+  padding: 10px 20px;
+  text-decoration: none;
+  font-size: 2em;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  margin: 10px;
+  width: 180px;
+  height: 40px;
+  transition: 0.5s;
+  outline: none;
+  text-align: center;
+  font-family: Helvetica, sans-serif;
+}
+
+.button:hover {
+  background-color: pink;
+}
+
+.bold {
+  font-weight: 900;
+}
+
+.benefits {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  width: 100%;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  color: #000;
+  background: linear-gradient(
+      rgba(255, 255, 255, 0.7),
+      rgba(255, 255, 255, 0.7)
+    ),
+    url("/imgs/faq-ts-liquid-collagen.jpg");
+  background-attachment: fixed;
+  background-size: cover;
+  position: relative;
+}
+
+.benefit-container img {
+  width: 200px;
+  height: 200px;
+  color: #fff;
+}
+
+.benefit-title {
+  font-size: 3em;
+  font-weight: 900;
+  color: var(--dark-brown);
+  text-align: center;
+}
+
+.benefit-tagline {
+  font-size: 2.3em;
+  font-weight: 600;
+  color: var(--dark-brown);
+  text-align: center;
+  margin-top: -25px;
+}
+
+.benefit-container {
+  width: 24%;
+  box-sizing: border-box;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.benefit-description {
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  color: var(--dark-brown);
+  width: 90%;
+  font-size: 1.8em;
+  line-height: 1.5em;
+  text-align: justify;
+}
+/* For medium screens */
+@media only screen and (max-width: 768px) {
+  .benefit-container {
+    width: calc(50% - 30px);
+  }
+  .header {
+    flex-direction: column;
+    align-items: center;
+  }
+  .header h1 {
+    font-size: 4.5em;
+  }
+  .header ul li {
+    font-size: 2em;
+  }
+  .main {
+    flex-direction: column;
+    align-items: center;
+  }
+  .main img {
+    width: 100%;
+    max-width: 300px;
+    height: 300px;
+    margin-top: 80px;
+  }
+  .main-text h2 {
+    font-size: 4em;
+    text-align: center;
+    margin-bottom: 20px;
+    margin-top: -25px;
+  }
+  .main-description {
+    margin-top: 20px;
+    font-size: 1.5em;
+  }
+
+  .cursive {
+    font-size: 1.5em;
+    margin-top: -20px;
+  }
+  .button {
+    font-size: 1em;
+    width: 100px;
+    height: 20px;
+  }
+}
+
+/* For small screens */
+@media only screen and (max-width: 480px) {
+  .benefit-container {
+    width: 100%;
+  }
+}
