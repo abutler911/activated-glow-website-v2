@@ -9,6 +9,12 @@
   src: url("/fonts/Charlotte.otf") format("opentype");
 }
 
+@font-face {
+  font-family: "Patrena";
+  src: url("/fonts/Patrena Rolane.otf") format("opentype");
+}
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap");
+
 /* Root Variables */
 :root {
   --dark-brown: #4e3524;
@@ -18,14 +24,14 @@
 }
 
 .cursive {
-  font-family: "Cherolina", cursive;
+  font-family: "Charlotte", cursive;
   font-size: 3.2em;
   font-weight: bold;
   color: var(--navy-blue);
 }
 /* Global Styles */
 body {
-  font-family: "Cherolina";
+  font-family: "Charlotte", cursive;
   margin: 0;
   padding: 0;
   background-color: #fff;
@@ -78,14 +84,14 @@ body {
 }
 
 .main-text h2 {
-  font-size: 7em;
+  font-size: 4em;
   color: var(--dark-brown);
   font-weight: 900;
   text-align: center;
 }
 
 .main-description {
-  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  font-family: "Poppins", sans-serif;
   color: var(--dark-brown);
   width: 100%;
   font-size: 1.8em;
@@ -135,7 +141,7 @@ body {
   justify-content: space-around;
   flex-wrap: wrap;
   width: 100%;
-  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  font-family: "Poppins", sans-serif;
   color: #000;
   background: linear-gradient(
       rgba(255, 255, 255, 0.7),
@@ -178,7 +184,7 @@ body {
 }
 
 .benefit-description {
-  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  font-family: "Poppins", sans-serif;
   color: var(--dark-brown);
   width: 90%;
   font-size: 1.8em;
@@ -208,7 +214,7 @@ body {
     width: 100%;
     max-width: 300px;
     height: 300px;
-    margin-top: 80px;
+    margin-top: 110px;
   }
   .main-text h2 {
     font-size: 4em;
