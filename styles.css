@@ -3,7 +3,10 @@
   font-family: "Cherolina";
   src: url("/fonts/Cherolina.ttf") format("truetype");
 }
-
+@font-face {
+  font-family: "Richardson";
+  src: url("/fonts/Richardson Script DEMO.otf") format("opentype");
+}
 @font-face {
   font-family: "Charlotte";
   src: url("/fonts/Charlotte.otf") format("opentype");
@@ -28,14 +31,14 @@
 }
 
 .cursive {
-  font-family: "Gloss and Bloom", cursive;
+  font-family: "Richardson", cursive;
   font-size: 3.2em;
   font-weight: bold;
   color: var(--navy-blue);
 }
 /* Global Styles */
 body {
-  font-family: "Gloss and Bloom", cursive;
+  font-family: "Richardson", cursive;
   margin: 0;
   padding: 0;
   background-color: #fff;
@@ -148,8 +151,8 @@ body {
   font-family: "Poppins", sans-serif;
   color: #000;
   background: linear-gradient(
-      rgba(255, 255, 255, 0.7),
-      rgba(255, 255, 255, 0.7)
+      rgba(255, 255, 255, 0.8),
+      rgba(255, 255, 255, 0.8)
     ),
     url("/imgs/faq-ts-liquid-collagen.jpg");
   background-attachment: fixed;
@@ -205,10 +208,12 @@ body {
     align-items: center;
   }
   .header h1 {
-    font-size: 2.8em;
+    display: flex;
+    font-size: 4em;
+    justify-content: center;
   }
   .header ul li {
-    font-size: 1.1em;
+    font-size: 1.5em;
   }
   .main {
     flex-direction: column;
@@ -221,7 +226,7 @@ body {
     margin-top: 110px;
   }
   .main-text h2 {
-    font-size: 2.5em;
+    font-size: 3.5em;
     text-align: center;
     margin-bottom: 20px;
     margin-top: -25px;
@@ -232,7 +237,7 @@ body {
   }
 
   .cursive {
-    font-size: 1em;
+    font-size: 1.5em;
     margin-top: -20px;
   }
   .button {
