@@ -26,7 +26,7 @@
 :root {
   --dark-brown: #4e3524;
   --main-pink: #e8b3bc;
-  --navy-blue: #4b68b8;
+  --navy-blue: rgb(75, 104, 184);
   --emerald-green: #009b77;
 }
 
@@ -37,8 +37,32 @@
   color: var(--navy-blue);
 }
 /* Global Styles */
+html {
+  font-size: 16px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  line-height: 1.5;
+  -webkit-text-size-adjust: 100%;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  -webkit-font-feature-settings: "kern", "liga", "clig", "calt";
+  font-feature-settings: "kern", "liga", "clig", "calt";
+  -moz-font-feature-settings: "kern", "liga", "clig", "calt";
+  -ms-font-feature-settings: "kern", "liga", "clig", "calt";
+  -o-font-feature-settings: "kern", "liga", "clig", "calt";
+  font-feature-settings: "kern", "liga", "clig", "calt";
+  font-kerning: normal;
+  font-language-override: normal;
+  font-size-adjust: none;
+  font-stretch: normal;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: normal;
+  letter-spacing: normal;
+}
 body {
-  font-family: "Richardson", cursive;
   margin: 0;
   padding: 0;
   background-color: #fff;
@@ -47,8 +71,9 @@ body {
 
 /* Header Styles */
 .header {
+  font-family: "Richardson", cursive;
   background-color: var(--dark-brown);
-  padding: 15px;
+  padding: 1rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -63,7 +88,7 @@ body {
 }
 
 .header h1 {
-  font-size: 4em;
+  font-size: 4rem;
 }
 
 .header ul {
@@ -73,11 +98,12 @@ body {
 .header ul li {
   display: inline;
   margin-right: 60px;
-  font-size: 2em;
+  font-size: 2.2rem;
 }
 
 /* Main Content Styles */
-.main {
+.main,
+.products {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -91,9 +117,10 @@ body {
 }
 
 .main-text h2 {
-  font-size: 4em;
+  font-family: "Richardson", cursive;
+  font-size: 9rem;
   color: var(--dark-brown);
-  font-weight: 900;
+  font-weight: 700;
   text-align: center;
 }
 
@@ -101,10 +128,9 @@ body {
   font-family: "Poppins", sans-serif;
   color: var(--dark-brown);
   width: 100%;
-  font-size: 1.8em;
-  line-height: 1.5em;
+  font-size: 1.8rem;
+  line-height: 2rem;
   text-align: center;
-  margin-top: -90px;
   justify-content: center;
   align-items: center;
 }
@@ -122,13 +148,13 @@ body {
   border-radius: 10px;
   padding: 10px 20px;
   text-decoration: none;
-  font-size: 2em;
+  font-size: 2rem;
   font-weight: 600;
   cursor: pointer;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   margin: 10px;
-  width: 180px;
-  height: 40px;
+  width: 12rem;
+  height: 3rem;
   transition: 0.5s;
   outline: none;
   text-align: center;
@@ -157,24 +183,27 @@ body {
     url("/imgs/faq-ts-liquid-collagen.jpg");
   background-attachment: fixed;
   background-size: cover;
-  position: relative;
+  padding-top: 3rem;
 }
 
 .benefit-container img {
   width: 200px;
   height: 200px;
   color: #fff;
+  transition: transform 0.6s ease-in-out;
 }
-
+.benefit-container:hover img {
+  transform: rotate(360deg);
+}
 .benefit-title {
-  font-size: 3em;
+  font-size: 3rem;
   font-weight: 900;
-  color: var(--dark-brown);
+  color: var(--navy-blue);
   text-align: center;
 }
 
 .benefit-tagline {
-  font-size: 2.3em;
+  font-size: 1.7rem;
   font-weight: 600;
   color: var(--dark-brown);
   text-align: center;
@@ -184,10 +213,16 @@ body {
 .benefit-container {
   width: 24%;
   box-sizing: border-box;
-  padding: 10px;
+  padding: 1rem;
   display: flex;
   flex-direction: column;
   align-items: center;
+  animation: fadeIn 1.5s ease-in-out;
+}
+
+.benefit-container:hover {
+  transform: scale(1.1);
+  transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
 }
 
 .benefit-description {
@@ -195,9 +230,52 @@ body {
   color: var(--dark-brown);
   width: 90%;
   font-size: 1.8em;
-  line-height: 1.5em;
+  line-height: 2.7rem;
   text-align: justify;
+  border: 1px solid var(--dark-brown);
+  padding: 1rem;
+  border-radius: 1rem;
+  height: 36rem;
+  background-color: rgba(75, 104, 184, 0.1);
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
+
+.benefit-cta {
+  font-size: 3em;
+  text-align: center;
+  font-weight: 700;
+  color: var(--dark-brown);
+}
+
+.benefit-subcta {
+  font-size: 2.5em;
+  text-align: center;
+  font-weight: 500;
+  color: var(--dark-brown);
+}
+
+.products {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  width: 100%;
+  font-family: "Poppins", sans-serif;
+  color: #000;
+}
+
+.product-image {
+  border-radius: 20px;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
 /* For medium screens */
 @media only screen and (max-width: 768px) {
   .benefit-container {
@@ -259,5 +337,12 @@ body {
 @media only screen and (max-width: 480px) {
   .benefit-container {
     width: 100%;
+  }
+  .benefit-cta {
+    font-size: 2.1em;
+  }
+
+  .benefit-subcta {
+    font-size: 1.8em;
   }
 }
